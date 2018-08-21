@@ -2,7 +2,10 @@
 <% if current_user %>
   <%= "Welcome #{current_user.name}" %>
   <%= link_to 'Logout', '/signout' %>
-  <%= image_tag current_user.image %>
+  <p><%= image_tag current_user.image %></p>
+  <p>Followers: <%= current_user.followers %></p>
+  <p>Following: <%= current_user.following %></p>
+  <p>Starred Repo Count: <%= current_user.find_star_number %></p>
 <% else %>
   <%= link_to "Login with GitHub!", '/auth/github' %>
 <% end %>
