@@ -5,6 +5,8 @@
   <p><%= image_tag @profile_pic %></p>
   <p>Starred Repo Count: <%= @star_number %></p>
   <p>Followers: <%= @followers %></p>
+  <p>Following: <%= @following %></p>
+  <p>Recent Activity: <%= @recent_activity %></p>
 <% else %>
   <%= link_to "Login with GitHub!", '/auth/github' %>
 <% end %>

@@ -12,6 +12,8 @@ class SessionsController < ApplicationController
       session[:name] = githubuser.name
       session[:profile_pic] = githubuser.profile_pic_url
       session[:star_number] = githubuser.star_number
+      session[:following] = githubuser.following
+      session[:recent_activity] = githubuser.recent_activity
     end
     redirect_to root_url, :notice => "Signed in!"
   end

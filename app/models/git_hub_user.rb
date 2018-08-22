@@ -9,6 +9,8 @@ class GitHubUser
     @star_number = 0
     @profile_pic_url = url_hash[0]
     @followers = []
+    @following = []
+    @recent_activity = []
     # @starred_url = url_hash[1]
     # @followers_url = url_hash[2]
     # @following_url = url_hash[3]
@@ -32,16 +34,33 @@ class GitHubUser
 
   def followers
     response = faraday_steup.get("#{@url_hash[2]}")
-    @star_number = JSON.parse(response.body)
+    @followers = JSON.parse(response.body)
     follower_logins = []
-    @star_number.map do |follower|
+    @followers.map do |follower|
       follower_logins << follower['login']
     end
     @followers = follower_logins.join(', ')
   end
 
-  # def following
-  #
-  # end
+  def following
+    response = faraday_steup.get("#{@url_hash[3]}")
+    @following = JSON.parse(response.body)
+    following_logins = []
+    @following.map do |follow|
+      following_logins << follow['login']
+    end
+    @following = following_logins.join(', ')
+  end
+
+  def recent_activity
+    response = faraday_steup.get("#{@url_hash[4]}")
+    @recent_activity = JSON.parse(response.body)
+    recent = []
+    @recent_activity.map do |activity|
+      string = [activity['type'], activity['repo']['name']]
+      recent << string.join(' for repo: ')
+    end
+    @recent_activity = recent[0..4].join(', ')
+  end
 
 end

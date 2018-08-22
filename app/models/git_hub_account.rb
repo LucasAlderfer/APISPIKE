@@ -27,6 +27,8 @@ class GitHubAccount
     new_user = GitHubUser.new(@uid, @name, @token, user_hash)
     new_user.star_number
     new_user.followers
+    new_user.following
+    new_user.recent_activity
     @all << new_user
   end
 end
