@@ -1,11 +1,10 @@
 <h1>Welcome!</h1>
 <% if current_user %>
-  <%= "Welcome #{current_user.name}" %>
+  <%= "Welcome #{@name}" %>
   <%= link_to 'Logout', '/signout' %>
-  <p><%= image_tag current_user.image %></p>
-  <p>Followers: <%= current_user.followers %></p>
-  <p>Following: <%= current_user.following %></p>
-  <p>Starred Repo Count: <%= current_user.find_star_number %></p>
+  <p><%= image_tag @profile_pic %></p>
+  <p>Starred Repo Count: <%= @star_number %></p>
+  <p>Followers: <%= @followers %></p>
 <% else %>
   <%= link_to "Login with GitHub!", '/auth/github' %>
 <% end %>
