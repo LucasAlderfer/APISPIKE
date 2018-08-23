@@ -1,12 +1,15 @@
 <h1>Welcome!</h1>
 <% if current_user %>
-  <%= "Welcome #{@name}" %>
+  <%= "Welcome #{@githubuser.name}" %>
   <%= link_to 'Logout', '/signout' %>
-  <p><%= image_tag @profile_pic %></p>
-  <p>Starred Repo Count: <%= @star_number %></p>
-  <p>Followers: <%= @followers %></p>
-  <p>Following: <%= @following %></p>
-  <p>Recent Activity: <%= @recent_activity %></p>
+  <p><%= image_tag @githubuser.profile_pic_url %></p>
+  <p>Starred Repo Count: <%= @githubuser.star_number %></p>
+  <p>Followers: <%= @githubuser.followers %></p>
+  <p>Following: <%= @githubuser.following %></p>
+  <p>Organizations: <%= @githubuser.organizations %></p>
+  <p>Recent Activity: <%= @githubuser.recent_activity %></p>
+  <p>Recent Activity of Repos I Follow: <%= @githubuser.following_activity %></p>
+  <p>Repos: <%= @githubuser.repos %></p>
 <% else %>
   <%= link_to "Login with GitHub!", '/auth/github' %>
 <% end %>
