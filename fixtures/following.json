@@ -1,0 +1,22 @@
+[
+    {
+        "login": "jtrtj",
+        "id": 31391433,
+        "node_id": "MDQ6VXNlcjMxMzkxNDMz",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/31391433?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jtrtj",
+        "html_url": "https://github.com/jtrtj",
+        "followers_url": "https://api.github.com/users/jtrtj/followers",
+        "following_url": "https://api.github.com/users/jtrtj/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jtrtj/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jtrtj/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jtrtj/subscriptions",
+        "organizations_url": "https://api.github.com/users/jtrtj/orgs",
+        "repos_url": "https://api.github.com/users/jtrtj/repos",
+        "events_url": "https://api.github.com/users/jtrtj/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jtrtj/received_events",
+        "type": "User",
+        "site_admin": false
+    }
+]

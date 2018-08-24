@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - text/html; charset=utf-8
+      Etag:
+      - W/"0c45b4274600e501243836ed7cbc3686"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _new_project_api_spike_session=azVCRHVHMk1VWG8yYmdlb2wxVDIrUzlYWE1iNTVESUpCS2tBZ2E5c3ZRSVEyNmhWNWhsSWxLUUJ2OUZlYi9iMUNHMnI5LzZ4S05sZkxBRkxaT3dVYVdUK1lKM1hHMEM3bnJoOWZ6SUx1Y1pvWkNURk56OWtlSmVrQUt2d1kwZVZkNDFpeXRwV2JTYkNVNWIva053eDhnPT0tLTU2NVlIWWJsVWdwNFg3NFFuU2RGSUE9PQ%3D%3D--d0fd0ef87fedb8dc675783d0019b8a2b9f3f9a27;
+        path=/; HttpOnly
+      X-Request-Id:
+      - be8d19e3-cc3a-4f67-9879-491ec87692dc
+      X-Runtime:
+      - '0.410093'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html>\n  <head>\n    <title>NewProjectApiSpike</title>\n
+        \   <meta name=\"csrf-param\" content=\"authenticity_token\" />\n<meta name=\"csrf-token\"
+        content=\"Jor6Cn8avkqnItlT47ARB4/5vImqjgUBPYsBORQ3JmHKeIzikNg2v8VYRiCWlp+76UiqKil5f1drBY8k8AC1RA==\"
+        />\n\n    <link rel=\"stylesheet\" media=\"all\" href=\"/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1\"
+        />\n    <script src=\"/assets/rails-ujs.self-8944eaf3f9a2615ce7c830a810ed630e296633063af8bb7441d5702fbe3ea597.js?body=1\"></script>\n<script
+        src=\"/assets/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js?body=1\"></script>\n<script
+        src=\"/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1\"></script>\n<script
+        src=\"/assets/application.self-58b1eb225e13e3709a67ff1fd3579ba47e1509e0221833d7f486543e09ddef38.js?body=1\"></script>\n
+        \ </head>\n\n  <body>\n    \n    <h1>Welcome!</h1>\n  <a href=\"/auth/github\">Login
+        with GitHub!</a>\n\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Thu, 23 Aug 2018 20:53:35 GMT
+recorded_with: VCR 4.0.0

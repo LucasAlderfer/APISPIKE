@@ -37,6 +37,7 @@ class GitHubUser
   end
 
   def recent_activity
+    #events_url, push events, commits, author me.
     url = user_hash['events_url'][0..-11]
     recent_activities = faraday_setup(url)
     recent = []
@@ -48,9 +49,10 @@ class GitHubUser
   end
 
   def following_activity
-    url = user_hash['received_events_url']
-    recent_activities = faraday_setup(url)
-    binding.pry
+    # binding.pry
+    #events_url, push events, commits, author not me.
+    # url = user_hash['received_events_url']
+    # recent_activities = faraday_setup(url)
   end
 
   def organizations
